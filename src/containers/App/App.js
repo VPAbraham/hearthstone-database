@@ -65,7 +65,7 @@ class App extends Component {
       <Router>
         <section>
           <NavBar />
-          <img src={hsBack} alt='background image'/>
+          <img className='background-image' src={hsBack} alt='background image'/>
 
           {/* <nav>
             <ul>
