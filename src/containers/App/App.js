@@ -4,6 +4,7 @@ import './App.scss';
 import images from '../../assets/images';
 import NavBar from '../../components/NavBar/NavBar';
 import FilterBar from '../FilterBar/FilterBar';
+import ClassBar from '../../components/ClassBar/ClassBar';
 import Classic from '../../Classic/Classic';
 import Basic from '../../Basic/Basic';
 import Boomsday from '../../Boomsday/Boomsday';
@@ -96,6 +97,7 @@ class App extends Component {
             </ul>
           </nav> */}
           <FilterBar />
+          <ClassBar />
           <Switch>
             <Route path='/basic'>
               <Basic setData={this.state.basic} />
