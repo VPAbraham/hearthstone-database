@@ -7,6 +7,7 @@ import rogueImg from './images/Class_Rogue.png';
 import shamanImg from './images/Class_Shaman.png';
 import warlockImg from './images/Class_Warlock.png';
 import warriorImg from './images/Class_Warrior.png';
+import hsLogo from './images/hs_logo.png';
 
 
 
@@ -19,7 +20,8 @@ const images = {
     rogueImg: rogueImg,
     shamanImg: shamanImg,
     warlockImg: warlockImg,
-    warriorImg: warriorImg  
+    warriorImg: warriorImg,
+    hsLogo: hsLogo,  
   }
 
 export default images 

@@ -1,20 +1,29 @@
 import React from 'react';
 import './NavBar.scss';
+import images from '../../assets/images';
 
-export const NavBar = () => {
+const NavBar = () => {
+  console.log(images)
 
   return (
-    <nav className='NavBar'>
-      <div>
+    <nav className='nav-bar'>
+      <img className='hs-logo' src={images.hsLogo} alt='Hearthstone logo'/>
+      <div className='nav-logo'>
+        
         <h1>HearthDB</h1>
-          <h4>HEARTHSTONE CARD DATABASE AND DECK TRACKER</h4>
+          <h4>HEARTHSTONE CARD DATABASE & DECK TRACKER</h4>
       </div>
-      <ul className='nav-items'>
-        <li>Build a Deck</li>
-        <li>Clear Deck</li>
-        <li>Make a Deck</li>
-        <li>Deck a Deck</li>
-      </ul>
+      <div className='nav-search'>
+        <label for='card-search' >Search for a card</label>
+        <input 
+        type='text' 
+        id='card-search' 
+        name='card-search'
+        // placeholder='Input Card Name'
+       />
+      </div>
     </nav>
   )
 }
+
+export default NavBar;

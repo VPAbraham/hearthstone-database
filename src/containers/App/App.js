@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.scss';
+import NavBar from '../../components/NavBar/NavBar';
+import FilterBar from '../FilterBar/FilterBar';
 import Classic from '../../Classic/Classic';
 import Basic from '../../Basic/Basic';
 import Boomsday from '../../Boomsday/Boomsday';
@@ -22,44 +24,45 @@ class App extends Component {
       uldum: []
     }
   }
-  componentDidMount() {
-    fetch("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "omgvamp-hearthstone-v1.p.rapidapi.com",
-        "x-rapidapi-key": "5f79c75fb8msh667198defcb0eb4p19a6e3jsnd10cd6e77216"
-      }
-    })
-      .then(response => response.json())
-      .then(data => 
-        this.setState({
-          basic: data.Basic,
-          classic: data.Classic,
-          woods: data['The Witchwood'],
-          boomsday: data['The Boomsday Project'],
-          rumble: data['Rastakhan\'s Rumble'],
-          rOS: data['Rise of Shadows'],
-          uldum: data['Saviors of Uldum']
-        })
-      )
+  // componentDidMount() {
+  //   fetch("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards", {
+  //     "method": "GET",
+  //     "headers": {
+  //       "x-rapidapi-host": "omgvamp-hearthstone-v1.p.rapidapi.com",
+  //       "x-rapidapi-key": "5f79c75fb8msh667198defcb0eb4p19a6e3jsnd10cd6e77216"
+  //     }
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => 
+  //       this.setState({
+  //         basic: data.Basic,
+  //         classic: data.Classic,
+  //         woods: data['The Witchwood'],
+  //         boomsday: data['The Boomsday Project'],
+  //         rumble: data['Rastakhan\'s Rumble'],
+  //         rOS: data['Rise of Shadows'],
+  //         uldum: data['Saviors of Uldum']
+  //       })
+  //     )
 
-    fetch("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "omgvamp-hearthstone-v1.p.rapidapi.com",
-        "x-rapidapi-key": "5f79c75fb8msh667198defcb0eb4p19a6e3jsnd10cd6e77216"
-      }
-    })
-      .then(response => response.json())
-      .then(data => console.log(data))
+  //   fetch("https://omgvamp-hearthstone-v1.p.rapidapi.com/cards", {
+  //     "method": "GET",
+  //     "headers": {
+  //       "x-rapidapi-host": "omgvamp-hearthstone-v1.p.rapidapi.com",
+  //       "x-rapidapi-key": "5f79c75fb8msh667198defcb0eb4p19a6e3jsnd10cd6e77216"
+  //     }
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => console.log(data))
     
-  }
+  // }
 
   render() {
     return (
       <Router>
         <section>
-          <nav>
+          <NavBar />
+          {/* <nav>
             <ul>
               <li>
                 <Link to='/' exact>Home</Link>
@@ -86,8 +89,8 @@ class App extends Component {
                 <Link to='/witchwood'>The Witchwood</Link>
               </li>
             </ul>
-          </nav>
-          <h1>Main Page</h1>
+          </nav> */}
+          <FilterBar />
           <Switch>
             <Route path='/basic'>
               <Basic setData={this.state.basic} />
