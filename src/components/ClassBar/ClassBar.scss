@@ -1,19 +1,28 @@
 .class-bar {
   width: 80%;
   // display: inline;
-  height:7rem;
+  height: 6rem;
   padding: .5rem 0;
   float: right;
   background: rgb(92, 92, 92);
   margin-top: -4px;
+
+  h4 {
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 2rem;
+    margin-top: -.5rem;
+    font-size: 1em;
+  }
 }
 
 .class-selector {
   display: flex;
   justify-content: space-around;
-  align-content: center;  
+  align-content: center;
+
   .class-img {
-    height: 6rem;
+    height: 4rem;
     width: auto;
+    border-radius: 50%;
   }
 }

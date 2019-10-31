@@ -7,23 +7,23 @@ const ClassBar = () => {
   const { druidImg, hunterImg, mageImg, paladinImg, priestImg, rogueImg, shamanImg, warlockImg, warriorImg} = images
   return(
     <section className='class-bar'>
+      <h4>Choose A Class</h4>
       <ul className='class-selector'>
         <li className='class-icon'>
-          <img className='class-img' src={druidImg} />
+          <img className='class-img' src={druidImg} alt='Druid class icon'/>
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={hunterImg} />
+          <img className='class-img' src={hunterImg} alt='Hunter class icon'/>
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={mageImg} />
+          <img className='class-img' src={mageImg} alt='Mage class icon'/>
+        </li>
+        <li className='class-icon'>
+          <img className='class-img' src={paladinImg} alt='Paladin class icon'/>
 
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={paladinImg} />
-
-        </li>
-        <li className='class-icon'>
-          <img className='class-img' src={priestImg} />
+          <img className='class-img' src={priestImg} alt='pri'/>
 
         </li>
         <li className='class-icon'>
