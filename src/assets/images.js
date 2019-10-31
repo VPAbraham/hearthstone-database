@@ -8,6 +8,7 @@ import shamanImg from './images/Class_Shaman.png';
 import warlockImg from './images/Class_Warlock.png';
 import warriorImg from './images/Class_Warrior.png';
 import hsLogo from './images/hs_logo.png';
+import hsBack from './images/hs-rumble.jpg';
 
 
 
@@ -21,7 +22,8 @@ const images = {
     shamanImg: shamanImg,
     warlockImg: warlockImg,
     warriorImg: warriorImg,
-    hsLogo: hsLogo,  
+    hsLogo: hsLogo,
+    hsBack: hsBack,  
   }
 
 export default images 
