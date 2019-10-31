@@ -4,6 +4,16 @@
   // background: gray;
   font-family: 'Quicksand', sans-serif;
   padding: 1.5rem 1rem;
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.filter-divider {
+  width: 100%;
+  height: 2px;
+  background: purple;
 }
 
 .mana-filter {
@@ -11,15 +21,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  h3 {
-    font-size: 1.2rem;
-  }
 
-  .filter-divider {
-    width: 100%;
-    height: 2px;
-    background: purple;
-  }
   .mana-ul-1,
   .mana-ul-2 {
     display: flex;
@@ -33,4 +35,26 @@
     }
   }
 
+}
+
+.rarity-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 4rem;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin-top: 1.2rem;
+    justify-content: space-evenly;
+
+    li {
+
+      img {
+        height: 40px;
+        width: auto;
+      }
+    }
+  }
 }

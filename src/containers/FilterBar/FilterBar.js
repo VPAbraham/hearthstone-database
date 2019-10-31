@@ -10,6 +10,8 @@ class FilterBar extends Component {
 
 
   render() {
+    const {common, rare, epic, legendary, uncraftable} = images;
+
     return (
       <div className='filter-bar'>
         <section className='mana-filter'>
@@ -31,7 +33,15 @@ class FilterBar extends Component {
           </ul>
         </section>
         <section className='rarity-filter'>
-          
+            <h3>Rarity</h3>
+            <div className='filter-divider'></div>
+          <ul>
+            <li><img className='rarity-gem' src={common}/></li>
+            <li><img className='rarity-gem' src={rare}/></li>
+            <li><img className='rarity-gem' src={epic}/></li>
+            <li><img className='rarity-gem' src={legendary}/></li>
+            <li><img className='rarity-gem' src={uncraftable}/></li>
+          </ul>
         </section>
         <section className='set-filter'>
 
