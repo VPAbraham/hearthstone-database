@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -35,6 +36,11 @@ body {
 
 .App-link {
   color: #09d3ac;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
 }
 
 .card-display {
