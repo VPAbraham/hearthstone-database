@@ -1,6 +1,19 @@
 .class-bar {
-  width: 20%;
-  display: inline;
-  height: 20px;
-  background: red;;
+  width: 80%;
+  // display: inline;
+  height:7rem;
+  padding: .5rem 0;
+  float: right;
+  background: rgb(92, 92, 92);
+  margin-top: -4px;
+}
+
+.class-selector {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;  
+  .class-img {
+    height: 6rem;
+    width: auto;
+  }
 }

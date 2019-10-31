@@ -96,8 +96,8 @@ class App extends Component {
               </li>
             </ul>
           </nav> */}
-          <FilterBar />
           <ClassBar />
+          <FilterBar />
           <Switch>
             <Route path='/basic'>
               <Basic setData={this.state.basic} />
