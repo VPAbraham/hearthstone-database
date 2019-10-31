@@ -1,0 +1,64 @@
+.nav-bar {
+  background: white;
+  display: flex;
+  color: black;
+  height: 6.5rem;
+  align-items: center;
+  padding: 1rem 4rem;
+  align-items: flex-end;
+  font-family: 'Montserrat', sans-serif;
+
+  ul {
+
+    display: flex;
+    justify-items: center;
+    list-style: none;
+
+    li {
+      height: 3rem;
+      font-size: .8em;
+    }
+  }
+}
+
+.hs-logo {
+  height: 4rem;
+  width: auto;
+  margin-right: 6px;
+}
+
+.nav-logo {
+  width: 50%;
+
+  h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 1em
+  }
+}
+
+.nav-search {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: center;
+
+  label {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  input {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 3px lightgray;
+    width: 100%;
+    font-size: 1em;
+  }
+}
