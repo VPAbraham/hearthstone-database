@@ -23,11 +23,11 @@ const ClassBar = () => {
 
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={priestImg} alt='pri'/>
+          <img className='class-img' src={priestImg} alt='Priest class icon'/>
 
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={rogueImg} />
+          <img className='class-img' src={rogueImg} alt=''/>
 
         </li>
         <li className='class-icon'>

@@ -20,9 +20,21 @@
   justify-content: space-around;
   align-content: center;
 
+  .class-icon {
+
+  }
+
   .class-img {
     height: 4rem;
     width: auto;
+    background: #A1B1FD;
+    box-shadow: 0 3px 4px black;
     border-radius: 50%;
+    transition: 0.5s;
+
+    &:hover {
+      box-shadow: 1px 2px 16px -1px #7ca0d6;
+      transition: 0.5s;
+    }
   }
 }

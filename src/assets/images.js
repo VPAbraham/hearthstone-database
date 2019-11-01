@@ -14,6 +14,13 @@ import rare from './images/rare.svg';
 import epic from './images/epic.svg';
 import legendary from './images/legendary.svg';
 import uncraftable from './images/uncraftable.svg';
+import basicIcon from './images/Set_Basic.png';
+import classicIcon from './images/Set_Classic.png';
+import woodIcon from './images/Set_WOOD.png';
+import boomIcon from './images/Set_BOOM.png';
+import saviorsIcon from './images/Set_Saviors.png';
+import shadowsIcon from './images/Set_Shadows.png';
+import rumbleIcon from './images/Set_Troll.png';
 
 
 
@@ -32,8 +39,16 @@ const images = {
     common: common,
     rare: rare,
     epic: epic,
-    legendary, legendary,
-    uncraftable, uncraftable,  
+    legendary: legendary,
+    uncraftable: uncraftable,
+    basicIcon: basicIcon,
+    classicIcon: classicIcon,
+    woodIcon: woodIcon,
+    boomIcon: boomIcon,
+    saviorsIcon: saviorsIcon,
+    shadowsIcon: shadowsIcon,
+    rumbleIcon: rumbleIcon,
+      
   }
 
 export default images 
