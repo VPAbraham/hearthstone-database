@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './FilterBar.scss';
 import images from '../../assets/images';
+import { mana } from './mana.svg';
 
 class FilterBar extends Component {
   constructor() {
@@ -13,7 +14,7 @@ class FilterBar extends Component {
     const {
       common, rare, epic, legendary, uncraftable,
       basicIcon, classicIcon, woodIcon, boomIcon,
-      saviorsIcon, shadowsIcon, rumbleIcon
+      saviorsIcon, shadowsIcon, rumbleIcon, manaIcon
     } = images;
 
     return (
@@ -22,7 +23,7 @@ class FilterBar extends Component {
           <h3>Mana</h3>
           <div className='filter-divider'></div>
           <ul className='mana-ul-1'>
-            <li>0</li>
+            <li style={{backgroundImage: `url('${mana}')`}}>0</li>
             <li>1</li>
             <li>2</li>
             <li>3</li>

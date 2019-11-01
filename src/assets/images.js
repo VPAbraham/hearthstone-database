@@ -21,6 +21,7 @@ import boomIcon from './images/Set_BOOM.png';
 import saviorsIcon from './images/Set_Saviors.png';
 import shadowsIcon from './images/Set_Shadows.png';
 import rumbleIcon from './images/Set_Troll.png';
+import manaIcon from './images/mana.svg';
 
 
 
@@ -48,7 +49,8 @@ const images = {
     saviorsIcon: saviorsIcon,
     shadowsIcon: shadowsIcon,
     rumbleIcon: rumbleIcon,
-      
+    manaIcon: manaIcon,
+
   }
 
 export default images 
