@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './FilterBar.scss';
 import images from '../../assets/images';
+import { mana } from './mana.svg';
 
 class FilterBar extends Component {
   constructor() {
@@ -10,7 +11,11 @@ class FilterBar extends Component {
 
 
   render() {
-    const {common, rare, epic, legendary, uncraftable} = images;
+    const {
+      common, rare, epic, legendary, uncraftable,
+      basicIcon, classicIcon, woodIcon, boomIcon,
+      saviorsIcon, shadowsIcon, rumbleIcon, manaIcon
+    } = images;
 
     return (
       <div className='filter-bar'>
@@ -18,7 +23,7 @@ class FilterBar extends Component {
           <h3>Mana</h3>
           <div className='filter-divider'></div>
           <ul className='mana-ul-1'>
-            <li>0</li>
+            <li style={{backgroundImage: `url('${mana}')`}}>0</li>
             <li>1</li>
             <li>2</li>
             <li>3</li>
@@ -44,7 +49,17 @@ class FilterBar extends Component {
           </ul>
         </section>
         <section className='set-filter'>
-
+          <h3>Set</h3>
+          <div className='filter-divider'></div>
+          <ul>
+            <li><p>Basic</p><img src={basicIcon} alt='basic set icon'/></li>
+            <li><p>Classic</p><img src={classicIcon} alt='classic set icon'/></li>
+            <li><p>The Witchwood</p><img src={woodIcon} alt='witchwoods set icon'/></li>
+            <li><p>The Boomsday Project</p><img src={boomIcon} alt='boomsday set icon'/></li>
+            <li><p>Rastakhan's Rumble</p><img src={rumbleIcon} alt='rumble set icon'/></li>
+            <li><p>Saviors of Uldum</p><img src={saviorsIcon} alt='saviors set icon'/></li>
+            <li><p>Rise of Shadows</p><img src={shadowsIcon} alt='shadows set icon'/></li>
+          </ul>
         </section>
       </div>
     )
