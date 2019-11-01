@@ -41,11 +41,11 @@ class FilterBar extends Component {
             <h3>Rarity</h3>
             <div className='filter-divider'></div>
           <ul>
-            <li><img className='rarity-gem' src={common}/></li>
-            <li><img className='rarity-gem' src={rare}/></li>
-            <li><img className='rarity-gem' src={epic}/></li>
-            <li><img className='rarity-gem' src={legendary}/></li>
-            <li><img className='rarity-gem' src={uncraftable}/></li>
+            <li><img className='rarity-gem' src={common} alt='common card gem'/></li>
+            <li><img className='rarity-gem' src={rare} alt='rare card gem'/></li>
+            <li><img className='rarity-gem' src={epic} alt='epic card gem'/></li>
+            <li><img className='rarity-gem' src={legendary} alt='legendary card gem'/></li>
+            <li><img className='rarity-gem' src={uncraftable} alt='uncraftable card gem'/></li>
           </ul>
         </section>
         <section className='set-filter'>
