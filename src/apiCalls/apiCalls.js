@@ -4,7 +4,7 @@ const cleanCardData = (data) => {
       hp, attacks, resistances, weaknesses, rarity,
       types, set, artist} = card
     const newCard = {
-      name: name, 
+      name, 
       imageUrl, 
       nationalPokedexNumber, 
       hp, 

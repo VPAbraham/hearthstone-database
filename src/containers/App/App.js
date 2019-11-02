@@ -15,10 +15,9 @@ class App extends Component {
     }
   }
   async componentDidMount() {
-    await getCards()
-    // const selectedCards = await getCardsBySet('');
+    const selectedCards = await getCards()
     this.setState({
-      // currentCards: selectedCards
+      currentCards: selectedCards
     })
   }
 

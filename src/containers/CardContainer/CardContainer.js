@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React   from 'react';
 import Card from '../../components/Card/Card';
 import './CardContainer.scss';
 
@@ -6,16 +6,19 @@ import './CardContainer.scss';
 const CardContainer = ({ currentCards }) => {
   console.log(currentCards) 
   let selectedCards = currentCards.map(card => {
+    const { name, imageUrl, nationalPokedexNumber,
+      hp, attacks, resistances, weaknesses, rarity,
+      types, set, artist } = card
     return (<Card
-      cardId={card.cardId || 'N/A'}
-      dbfId={card.dbfId || 'N/A'}
-      cardSet={card.cardSet || 'N/A'}
-      name={card.name || 'N/A'}
-      img={card.img}
-      playerClass={card.playerClass || 'N/A'}
-      type={card.type || 'N/A'}
-      text={card.text || 'No flavor text available'}
-      key={card.cardId}
+      name={name || 'N/A'}
+      imageUrl={imageUrl || 'N/A'}
+      pokedexNum={nationalPokedexNumber || 'N/A'}
+      hp={hp || 'N/A'}
+      attacks={attacks || 'NA'}
+      resistances={resistances || 'N/A'}
+      weaknesses={weaknesses || 'N/A'}
+      rarity={rarity || 'N/A'}
+      key={imageUrl}
     />)
     }) 
     console.log(selectedCards)

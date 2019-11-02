@@ -2,18 +2,18 @@ import React from 'react';
 import './Card.scss';
 
 const Card = (props) => {
-  console.log(props)
-  const { name, cardId, dfbId, cardSet, img, playerClass, type, text } = props
+  const { name, imageUrl, pokedexNum,
+    hp, attacks, resistances, weaknesses, rarity,
+    types, set, artist } = props
 
   return(
     <div className='card'>
       <h1>{name}</h1>
-      <p>Class:{playerClass}</p>
-      <p>Type: {type}</p>
-      <p>Card Set: {cardSet}</p>
-      <p>Flavor Text:{text}</p>
-      <p>{img}</p>
-      <img src={img} alt={name}/>
+      <p>Pokedex No. {pokedexNum}</p>
+      <p>Type: {types}</p>
+      <p>HP: {hp}</p>
+     
+      <img src={imageUrl} alt={name}/>
     </div>
   )
 }
