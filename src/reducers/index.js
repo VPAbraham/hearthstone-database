@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { currentCards } from './currentCards';
+import { cards } from './cards';
+import { isLoading } from './isLoading';
 
 export const rootReducer = combineReducers({
-  currentCards,
+  cards,
+  isLoading
 });

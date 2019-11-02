@@ -7,18 +7,12 @@ import FilterBar from '../FilterBar/FilterBar';
 import ClassBar from '../../components/ClassBar/ClassBar';
 import { getCards } from '../../apiCalls/apiCalls';
 import CardContainer from '../CardContainer/CardContainer';
+import { connect } from 'react-redux';
+import { setCurrentCards, toggleLoading } from '../../actions/index';
+
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      currentCards: [],
-    }
-  }
+
   async componentDidMount() {
-    const selectedCards = await getCards()
-    this.setState({
-      currentCards: selectedCards
-    })
   }
 
   render() {
@@ -28,42 +22,28 @@ class App extends Component {
         <section>
           <NavBar />
           <img className='background-image' src={hsBack} alt='background poster'/>
-
-          {/* <nav>
-            <ul>
-              <li>
-                <Link to='/' exact>Home</Link>
-              </li>
-              <li>
-                <Link to='/basic'>Basic</Link>
-              </li>
-              <li>
-                <Link to='/classic'>Classic</Link> 
-              </li>
-              <li>
-                <Link to='/boomsday'>The Boomsday Project</Link>
-              </li>
-              <li>
-                <Link to='/rumble'>Rastakhan's Rumble</Link>
-              </li>
-              <li>
-                <Link to='/rOS'>Rise of Shadows</Link>
-              </li>
-              <li>
-                <Link to='/uldum'>Saviors of Uldum</Link>
-              </li>
-              <li>
-                <Link to='/witchwood'>The Witchwood</Link>
-              </li>
-            </ul>
-          </nav> */}
           <ClassBar />
           <FilterBar />
-          <CardContainer key='' currentCards={this.state.currentCards}/>  
+          <CardContainer key='' 
+          // currentCards={this.state.currentCards}
+          />  
         </section>
       </Router>    
     )
   }
 }
 
+// export const mapStateToProps = ({ currentCards, isLoading }) => ({
+//   currentCards,
+//   isLoading
+// });
+
+// export const mapDispatchToProps = dispatch => (
+//   bindActionCreators({
+//     setCurrentCards,
+//     toggleLoading
+//   }, dispatch)
+// )
+
 export default App;
+// connect(mapStateToProps, mapDispatchToProps)(App);

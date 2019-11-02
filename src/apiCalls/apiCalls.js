@@ -1,3 +1,6 @@
+const cardUrl = 'https://api.pokemontcg.io/v1/cards';
+
+
 const cleanCardData = (data) => {
   return data.map(card => {
     const { name, imageUrl, nationalPokedexNumber, 
@@ -21,11 +24,11 @@ const cleanCardData = (data) => {
 }
 
 export const getCards = async () => {
-  const response = await fetch('https://api.pokemontcg.io/v1/cards');
+  const response = await fetch(cardUrl);
   const rawData = await response.json();
   const rawCards = await rawData.cards;
   const data = cleanCardData(rawCards)
   console.log(data);
-  return data 
+  return data  
 }
 

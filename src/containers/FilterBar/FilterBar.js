@@ -2,12 +2,42 @@ import React, { Component } from 'react';
 import './FilterBar.scss';
 import images from '../../assets/images';
 import { mana } from './mana.svg';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { setCardCollection } from '../../actions/index';
+import { getCards } from '../../apiCalls/apiCalls';
 
 class FilterBar extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      currentFilter: null,
+      currentCards: null
+    }
   }
+
+  async componentDidMount() {
+    let cards = await getCards()
+    this.setState({
+      currentCards: cards,
+    })
+    this.props.setCardCollection(cards)
+  }
+
+  handleChange = (e) => {
+    e.preventDefault()
+    const filterParam = e.currentTarget.id
+    console.log(filterParam)
+    this.setState ({
+      currentFilter: filterParam
+    })
+    console.log(this.state)
+  }
+
+  handleCards = async () => {
+  }
+
+
 
 
   render() {
@@ -41,11 +71,10 @@ class FilterBar extends Component {
             <h3>Rarity</h3>
             <div className='filter-divider'></div>
           <ul>
-            <li><img className='rarity-gem' src={common} alt='common card gem'/></li>
-            <li><img className='rarity-gem' src={rare} alt='rare card gem'/></li>
-            <li><img className='rarity-gem' src={epic} alt='epic card gem'/></li>
-            <li><img className='rarity-gem' src={legendary} alt='legendary card gem'/></li>
-            <li><img className='rarity-gem' src={uncraftable} alt='uncraftable card gem'/></li>
+            <li><img className='rarity-gem' src={common} id='common' alt='common card gem' onClick={((e) => this.handleChange(e))}/>Common</li>
+            <li><img className='rarity-gem' src={rare} id='uncommon' alt='uncommon card gem' onClick={((e) => this.handleChange(e))}/>Uncommon</li>
+            <li><img className='rarity-gem' src={epic} id='rare' alt='epic card gem' onClick={((e) => this.handleChange(e))}/>Rare</li>
+            <li><img className='rarity-gem' src={legendary} id='rare-holo' alt='legendary card gem' onClick={((e) => this.handleChange(e))}/>Rare Holographic</li>
           </ul>
         </section>
         <section className='set-filter'>
@@ -66,4 +95,11 @@ class FilterBar extends Component {
   }
 }
 
-export default FilterBar
+
+export const mapDispatchToProps = dispatch => (
+  bindActionCreators({
+    setCardCollection
+  }, dispatch)
+)
+
+export default connect(null, mapDispatchToProps)(FilterBar);
