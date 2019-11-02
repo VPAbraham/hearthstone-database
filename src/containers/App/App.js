@@ -24,9 +24,7 @@ class App extends Component {
           <img className='background-image' src={hsBack} alt='background poster'/>
           <ClassBar />
           <FilterBar />
-          <CardContainer key='' 
-          // currentCards={this.state.currentCards}
-          />  
+          <CardContainer />  
         </section>
       </Router>    
     )
