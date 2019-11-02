@@ -9,8 +9,8 @@ const NavBar = () => {
       <img className='hs-logo' src={images.hsLogo} alt='Hearthstone logo'/>
       <div className='nav-logo'>
         
-        <h1>HearthDB</h1>
-          <h4>HEARTHSTONE CARD DATABASE & DECK TRACKER</h4>
+        <h1>PokemonDB</h1>
+          <h4>POKEMON CARD DATABASE & DECK TRACKER</h4>
       </div>
       <div className='nav-search'>
         <label for='card-search' >Search for a card</label>

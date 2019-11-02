@@ -5,10 +5,8 @@ import images from '../../assets/images';
 import NavBar from '../../components/NavBar/NavBar';
 import FilterBar from '../FilterBar/FilterBar';
 import ClassBar from '../../components/ClassBar/ClassBar';
-import { getCards } from '../../apiCalls/apiCalls';
 import CardContainer from '../CardContainer/CardContainer';
 import { connect } from 'react-redux';
-import { setCurrentCards, toggleLoading } from '../../actions/index';
 
 class App extends Component {
 
@@ -31,17 +29,4 @@ class App extends Component {
   }
 }
 
-// export const mapStateToProps = ({ currentCards, isLoading }) => ({
-//   currentCards,
-//   isLoading
-// });
-
-// export const mapDispatchToProps = dispatch => (
-//   bindActionCreators({
-//     setCurrentCards,
-//     toggleLoading
-//   }, dispatch)
-// )
-
 export default App;
-// connect(mapStateToProps, mapDispatchToProps)(App);
