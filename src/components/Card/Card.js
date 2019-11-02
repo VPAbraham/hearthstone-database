@@ -11,8 +11,7 @@ const Card = (props) => {
       <h1>{name}</h1>
       <p>Pokedex No. {pokedexNum}</p>
       <p>Type: {types}</p>
-      <p>HP: {hp}</p>
-     
+      <p>Rarity: {rarity}</p>
       <img src={imageUrl} alt={name}/>
     </div>
   )

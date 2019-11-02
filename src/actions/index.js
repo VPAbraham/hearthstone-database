@@ -1,4 +1,9 @@
-export const setCurrentCards = (cardData) => ({
+export const setCurrentCards = (currentCards) => ({
   type: "SET_CURRENT_CARD",
-  cardData
+  currentCards
+})
+
+export const toggleLoading = (isLoading) => ({
+  type: "TOGGLE_LOADING",
+  isLoading
 })
