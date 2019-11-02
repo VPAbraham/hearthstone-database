@@ -27,19 +27,19 @@ const ClassBar = () => {
 
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={rogueImg} alt=''/>
+          <img className='class-img' src={rogueImg} alt='Rogue class icon'/>
 
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={shamanImg} />
+          <img className='class-img' src={shamanImg} alt='Shaman class icon'/>
 
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={warlockImg} />
+          <img className='class-img' src={warlockImg} alt='Warlock class icon'/>
 
         </li>
         <li className='class-icon'>
-          <img className='class-img' src={warriorImg} />
+          <img className='class-img' src={warriorImg} alt='Warrior class icon'/>
 
         </li>
       </ul>

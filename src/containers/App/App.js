@@ -5,27 +5,30 @@ import images from '../../assets/images';
 import NavBar from '../../components/NavBar/NavBar';
 import FilterBar from '../FilterBar/FilterBar';
 import ClassBar from '../../components/ClassBar/ClassBar';
-import { getAllCards, getCardsByClass } from '../../apiCalls/apiCalls';
+import { getCards } from '../../apiCalls/apiCalls';
+import CardContainer from '../CardContainer/CardContainer';
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      cards: [],
-      selectedSet: null
+      currentCards: [],
     }
   }
-  componentDidMount() {
-    getCardsByClass('Hunter')
+  async componentDidMount() {
+    await getCards()
+    // const selectedCards = await getCardsBySet('');
+    this.setState({
+      // currentCards: selectedCards
+    })
   }
 
   render() {
     const { hsBack } = images;
-
     return (
       <Router>
         <section>
           <NavBar />
-          <img className='background-image' src={hsBack} alt='background image'/>
+          <img className='background-image' src={hsBack} alt='background poster'/>
 
           {/* <nav>
             <ul>
@@ -57,22 +60,7 @@ class App extends Component {
           </nav> */}
           <ClassBar />
           <FilterBar />
-          <Switch>
-            <Route path='/basic'>
-            </Route>  
-            <Route path='/classic'>
-            </Route>
-            <Route path='/boomsday'>  
-            </Route>
-            <Route path='/rumble'>  
-            </Route>
-            <Route path='/rOS'>  
-            </Route>
-            <Route path='/uldum'>  
-            </Route>
-            <Route path='/witchwood'>  
-            </Route>  
-          </Switch>    
+          <CardContainer key='' currentCards={this.state.currentCards}/>  
         </section>
       </Router>    
     )

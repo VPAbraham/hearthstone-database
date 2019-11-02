@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { cards } from './cards';
+import { currentCards } from './currentCards';
 
 export const rootReducer = combineReducers({
-  cards,
+  currentCards,
 });

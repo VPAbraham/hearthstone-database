@@ -3,7 +3,6 @@ import './NavBar.scss';
 import images from '../../assets/images';
 
 const NavBar = () => {
-  console.log(images)
 
   return (
     <nav className='nav-bar'>
