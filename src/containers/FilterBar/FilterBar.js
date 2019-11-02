@@ -47,17 +47,25 @@ class FilterBar extends Component {
       saviorsIcon, shadowsIcon, rumbleIcon, manaIcon
     } = images;
 
+    const pokemonTypes = ['bug', 'dark', 'dragon', 'electric', 
+    'fairy', 'fighting','fire', 'flying', 'ghost', 'grass', 'ground', 
+    'ice', 'normal', 'poison', 'psychic', 'rock', 'steel', 'water']
+
+    const typeDisplay = pokemonTypes.map(type => {
+      return (
+        <li filter-id='type' type-id={type}>
+          <img src={images.type} alt='type symbol'/>
+        </li>
+      )
+    })
+
     return (
       <div className='filter-bar'>
         <section className='mana-filter'>
-          <h3>Mana</h3>
+          <h3>Type</h3>
           <div className='filter-divider'></div>
           <ul className='mana-ul-1'>
-            <li style={{backgroundImage: `url('${mana}')`}}>0</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
+           {typeDisplay}
           </ul>
           <ul className='mana-ul-2'>
             <li>5</li>

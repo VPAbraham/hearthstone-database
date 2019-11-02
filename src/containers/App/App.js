@@ -14,12 +14,12 @@ class App extends Component {
   }
 
   render() {
-    const { hsBack } = images;
+    const { hsBack, backGround } = images;
     return (
       <Router>
         <section>
           <NavBar />
-          <img className='background-image' src={hsBack} alt='background poster'/>
+          <img className='background-image' src={backGround} alt='background poster'/>
           <ClassBar />
           <FilterBar />
           <CardContainer />  

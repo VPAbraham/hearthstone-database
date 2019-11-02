@@ -6,7 +6,7 @@ const NavBar = () => {
 
   return (
     <nav className='nav-bar'>
-      <img className='hs-logo' src={images.hsLogo} alt='Hearthstone logo'/>
+      <img className='hs-logo' src={images.pokeballLogo} alt='Hearthstone logo'/>
       <div className='nav-logo'>
         
         <h1>PokemonDB</h1>
