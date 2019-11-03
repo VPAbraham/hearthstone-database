@@ -1,6 +1,11 @@
-export const setFilter = (currentCards) => ({
-  type: "SET_CURRENT_CARDS",
-  currentCards
+export const setFilterType = (filterType) => ({
+  type: "SET_FILTER_TYPE",
+  filterType
+})
+
+export const setFilterCriteria = (filterCriteria) => ({
+  type: "SET_FILTER_CRITERIA",
+  filterCriteria
 })
 
 export const setCardCollection = (cards) => ({

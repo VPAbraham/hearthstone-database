@@ -10,9 +10,9 @@ import warriorImg from './images/Class_Warrior.png';
 import hsLogo from './images/hs_logo.png';
 import hsBack from './images/hs-rumble.jpg';
 import common from './images/common.svg';
-import rare from './images/rare.svg';
-import epic from './images/epic.svg';
-import legendary from './images/legendary.svg';
+import uncommon from './images/rare.svg';
+import rare from './images/epic.svg';
+import rareholo from './images/legendary.svg';
 import uncraftable from './images/uncraftable.svg';
 import basicIcon from './images/Set_Basic.png';
 import classicIcon from './images/Set_Classic.png';
@@ -60,10 +60,6 @@ const images = {
     warriorImg: warriorImg,
     hsLogo: hsLogo,
     hsBack: hsBack,
-    common: common,
-    rare: rare,
-    epic: epic,
-    legendary: legendary,
     uncraftable: uncraftable,
     basicIcon: basicIcon,
     classicIcon: classicIcon,
@@ -93,6 +89,10 @@ const images = {
     rock,
     steel,
     water,
+    common,
+    rare,
+    uncommon,
+    rareholo,
   }
 
 export default images 

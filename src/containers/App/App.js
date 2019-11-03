@@ -4,15 +4,13 @@ import './App.scss';
 import images from '../../assets/images';
 import NavBar from '../../components/NavBar/NavBar';
 import FilterBar from '../FilterBar/FilterBar';
-import ClassBar from '../../components/ClassBar/ClassBar';
 import CardContainer from '../CardContainer/CardContainer';
 import { connect } from 'react-redux';
-import { getMoreCards } from '../../apiCalls/apiCalls';
+import { } from '../../apiCalls/apiCalls';
 
 class App extends Component {
 
   async componentDidMount() {
-    await getMoreCards()
   }
 
   render() {
