@@ -20,6 +20,7 @@ const CardContainer = (props) => {
       imageUrl={imageUrl || 'N/A'}
       pokedexNum={nationalPokedexNumber || 'N/A'}
       hp={hp || 'N/A'}
+      types={types}
       attacks={attacks || 'NA'}
       resistances={resistances || 'N/A'}
       weaknesses={weaknesses || 'N/A'}
