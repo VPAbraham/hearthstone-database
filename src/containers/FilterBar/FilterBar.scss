@@ -89,6 +89,11 @@
           background: rgb(167, 168, 168);
         }
       }
+
+      p {
+        position: absolute;
+        font-size: 12px;
+      }
     }
   }
 }
@@ -105,6 +110,7 @@
       display: flex;
       margin: 5px 0;
       justify-content: space-around;
+      background: #309EDB;
       transition: 0.5s;
       border-radius: 5px;
       align-items: center;
@@ -126,7 +132,6 @@
 
       img {
         border-radius: 3px;
-        background: #A1B1FD;
         height: 2rem;
       }
     }

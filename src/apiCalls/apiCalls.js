@@ -1,5 +1,5 @@
 const baseUrl = 'https://api.pokemontcg.io/v1/cards';
-const pageHeader = '?types=water&pageSize=120'
+const pageHeader = '?types=dragon&pageSize=120'
 
 
 const cleanCardData = (data) => {
@@ -39,10 +39,9 @@ export const getCards = async () => {
 }
 
 const generateCardUrl = (base, filterType, filterCriteria, page) => {
-  
   // if(filterType === 'types') {
 
-  //   const genUrl = (base + '?types' + pokeTy)
+  //   const genUrl = (base + '?types' + )
   //   return genUrl
   // }
 }
