@@ -8,6 +8,9 @@ import { setCardCollection, setFilterType, setFilterCriteria } from '../../actio
 import { getCards } from '../../apiCalls/apiCalls';
 
 class FilterBar extends Component {
+  constructor() {
+    super()
+  }
   async componentDidMount() {
     let cards = await getCards();
     this.props.setCardCollection(cards);
@@ -28,7 +31,9 @@ class FilterBar extends Component {
     await this.handleChange(e);
     const { filterType, filterCriteria } = this.props
     console.log(filterType, filterCriteria)
-    await getCards(filterType, filterCriteria)
+    const newCards = await getCards(filterType, filterCriteria)
+    this.props.setCardCollection(newCards)
+    console.log(newCards)
   }
 
 

@@ -29,12 +29,12 @@ const cleanCardData = (data) => {
 export const getCards = async (filterType, filterCriteria) => {
 
   const genUrl = generateCardUrl(baseUrl, filterType, filterCriteria)
+  console.log(genUrl)
   const response = await fetch(genUrl || baseUrl);
-
   const rawData = await response.json();
 
   const rawCards = await rawData.cards;
-
+  console.log(rawCards)
   const data = cleanCardData(rawCards)
 
   return data  
@@ -44,11 +44,11 @@ const generateCardUrl = (base, filterType, filterCriteria, page) => {
   
   const genUrl = () => {
       if(filterType === 'types') {
-        console.log(base + '?types=' + filterCriteria)
+        return (base + '?types=' + filterCriteria)
     } else if (filterType === 'rarity') {
-        console.log(base + '?rarity=' + filterCriteria)
+        return (base + '?rarity=' + filterCriteria)
     } else if (filterType === 'set'){
-        console.log(base + '?set=' + filterCriteria)
+        return (base + '?set=' + filterCriteria)
     }
   }
   return genUrl()  

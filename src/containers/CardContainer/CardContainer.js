@@ -6,11 +6,10 @@ import { connect } from 'react-redux';
 
 
 const CardContainer = (props) => {
-  const { cards, filterType } = props;
-  console.log(filterType)
+  const { cards } = props;
   console.log(cards)
 
-  let selectedCards = cards.map(card => {
+  let selectedCards = props.cards.map(card => {
 
     const { name, imageUrl, nationalPokedexNumber,
       hp, attacks, resistances, weaknesses, rarity,
