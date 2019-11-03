@@ -1,5 +1,5 @@
 const baseUrl = 'https://api.pokemontcg.io/v1/cards';
-const pageHeader = '?page=5;'
+const pageHeader = '?types=water&pageSize=120'
 
 
 const cleanCardData = (data) => {
@@ -26,23 +26,23 @@ const cleanCardData = (data) => {
 
 export const getCards = async () => {
   const response = await fetch(baseUrl + pageHeader);
+  // const response = await fetch('baseUrl' {
+  //   method: 'get',
+  //   params: {
+  //     Count: '200'
+  //   }
+  // })
   const rawData = await response.json();
   const rawCards = await rawData.cards;
   const data = cleanCardData(rawCards)
   return data  
 }
 
-export const getMoreCards = async () => {
-  const request = new Request((baseUrl+pageHeader), {
-    headers: new Headers({
-      'Content-Type': 'application/json',
-      'Count': '400'
-    })
-  })
-  const response = await fetch(request)
-  const rawData = await response.json();
-  const rawCards = await rawData.cards;
-  const data = cleanCardData(rawCards)
-  console.log(data);
-  return data
+const generateCardUrl = (base, filterType, filterCriteria, page) => {
+  
+  // if(filterType === 'types') {
+
+  //   const genUrl = (base + '?types' + pokeTy)
+  //   return genUrl
+  // }
 }

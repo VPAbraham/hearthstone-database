@@ -12,7 +12,9 @@ class FilterBar extends Component {
     super()
     this.state = {
       currentFilter: null,
-      currentCards: null
+      currentCards: null,
+      filterType: null,
+      filterCriteria: null
     }
   }
 
@@ -34,7 +36,7 @@ class FilterBar extends Component {
     console.log(this.state)
   }
 
-  handleCards = async () => {
+  filterClickHandler = async () => {
   }
 
 
