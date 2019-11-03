@@ -29,14 +29,11 @@ const cleanCardData = (data) => {
 export const getCards = async (filterType, filterCriteria) => {
 
   const genUrl = generateCardUrl(baseUrl, filterType, filterCriteria)
-  console.log(genUrl)
   const response = await fetch(genUrl || baseUrl);
   const rawData = await response.json();
-
   const rawCards = await rawData.cards;
-  console.log(rawCards)
   const data = cleanCardData(rawCards)
-
+  console.log(data)
   return data  
 }
 

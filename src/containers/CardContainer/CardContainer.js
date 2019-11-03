@@ -6,9 +6,6 @@ import { connect } from 'react-redux';
 
 
 const CardContainer = (props) => {
-  const { cards } = props;
-  console.log(cards)
-
   let selectedCards = props.cards.map(card => {
 
     const { name, imageUrl, nationalPokedexNumber,
@@ -26,6 +23,8 @@ const CardContainer = (props) => {
       weaknesses={weaknesses || 'N/A'}
       rarity={rarity || 'N/A'}
       key={imageUrl}
+      set={set}
+      artist={artist}
     />)
     }) 
   return(

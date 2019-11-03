@@ -13,8 +13,8 @@ export const setCardCollection = (cards) => ({
   cards
 })
 
-export const toggleLoading = (isLoading) => ({
+export const toggleLoading = (boolean) => ({
   type: "TOGGLE_LOADING",
-  isLoading
+  boolean
 })
 
