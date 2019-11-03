@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 
 
 const CardContainer = (props) => {
-  const { cards } = props;
+  const { cards, filterType } = props;
+  console.log(filterType)
   console.log(cards)
 
   let selectedCards = cards.map(card => {
@@ -35,8 +36,9 @@ const CardContainer = (props) => {
   )
 }
 
-export const mapStateToProps =( { cards } ) => ({
-  cards
+export const mapStateToProps =( { cards, filterType } ) => ({
+  cards,
+  filterType
 })
 
 export default connect(mapStateToProps)(CardContainer);

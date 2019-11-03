@@ -8,22 +8,9 @@ import { setCardCollection, setFilterType, setFilterCriteria } from '../../actio
 import { getCards } from '../../apiCalls/apiCalls';
 
 class FilterBar extends Component {
-  constructor() {
-    super()
-    this.state = {
-      currentFilter: null,
-      currentCards: null,
-      filterType: null,
-      filterCriteria: null
-    }
-  }
-
   async componentDidMount() {
-    let cards = await getCards()
-    // this.setState({
-    //   currentCards: cards,
-    // })
-    this.props.setCardCollection(cards)
+    let cards = await getCards();
+    this.props.setCardCollection(cards);
   }
 
   handleChange = (e) => {
@@ -37,10 +24,10 @@ class FilterBar extends Component {
   }
 
   filterClickHandler = async (e) => {
-    console.log('hi')
     e.preventDefault();
-    this.handleChange(e);
+    await this.handleChange(e);
     const { filterType, filterCriteria } = this.props
+    console.log(filterType, filterCriteria)
     await getCards(filterType, filterCriteria)
   }
 
@@ -70,7 +57,7 @@ class FilterBar extends Component {
       const imgSrc = eval(rarity)
       return (
         <li>
-          <img className='rarity' id={rarity} src={imgSrc} alt='rarity gem' onClick={((e) => this.handleChange(e))}/>
+          <img className='rarity' id={rarity} src={imgSrc} alt='rarity gem' onClick={((e) => this.filterClickHandler(e))}/>
         </li>
       )
     })
@@ -79,9 +66,8 @@ class FilterBar extends Component {
 
     const setDisplay = pokemonSets.map(set => {
       const imgSrc = ('https://images.pokemontcg.io/' + set + '/symbol.png')
-      console.log(imgSrc)
       return (
-        <li className='set' id={set} onClick={((e) => this.handleChange(e))}>
+        <li className='set' id={set} onClick={((e) => this.filterClickHandler(e))}>
           <p>{set}</p>
           <img  src={imgSrc}  alt='set icon'/>
         </li>
