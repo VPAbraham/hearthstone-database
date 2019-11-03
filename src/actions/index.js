@@ -1,9 +1,15 @@
-export const storeAllCards = (cards) => ({
-  type: "STORE_ALL_CARDS",
+export const setFilter = (currentCards) => ({
+  type: "SET_CURRENT_CARDS",
+  currentCards
+})
+
+export const setCardCollection = (cards) => ({
+  type: 'SET_CARD_COLLECTION',
   cards
 })
 
-export const storeImageAssets = (images) => ({
-  type: "STORE_IMAGE_ASSETS",
-  images
+export const toggleLoading = (isLoading) => ({
+  type: "TOGGLE_LOADING",
+  isLoading
 })
+

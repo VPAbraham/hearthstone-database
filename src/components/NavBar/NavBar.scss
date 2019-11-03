@@ -1,5 +1,5 @@
 .nav-bar {
-  background: white;
+  background: rgb(243, 243, 243);
   display: flex;
   color: black;
   height: 6.5rem;
@@ -25,6 +25,13 @@
   height: 4rem;
   width: auto;
   margin-right: 6px;
+  transition: .8s;
+
+
+  &:hover {
+    transform: rotate(2turn);
+    transition: .6s;
+  }
 }
 
 .nav-logo {
