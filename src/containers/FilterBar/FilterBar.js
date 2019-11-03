@@ -20,24 +20,28 @@ class FilterBar extends Component {
 
   async componentDidMount() {
     let cards = await getCards()
-    this.setState({
-      currentCards: cards,
-    })
+    // this.setState({
+    //   currentCards: cards,
+    // })
     this.props.setCardCollection(cards)
   }
 
   handleChange = (e) => {
     e.preventDefault()
+    console.log('hullo')
+
     const filterType = e.currentTarget.className
     const filterCriteria = e.currentTarget.id
     this.props.setFilterCriteria(filterCriteria)
     this.props.setFilterType(filterType)
-  
   }
 
   filterClickHandler = async (e) => {
+    console.log('hi')
     e.preventDefault();
-    
+    this.handleChange(e);
+    const { filterType, filterCriteria } = this.props
+    await getCards(filterType, filterCriteria)
   }
 
 
@@ -57,7 +61,7 @@ class FilterBar extends Component {
     const typeDisplay = pokemonTypes.map(type => {
       return (
         <li >
-          <img className='types' id={type} src={images[type]} alt='type symbol' onClick={((e) => this.handleChange(e))}/>
+          <img className='types' id={type} src={images[type]} alt='type symbol' onClick={((e) => this.filterClickHandler(e))}/>
         </li>
       )
     })
@@ -113,6 +117,11 @@ class FilterBar extends Component {
 }
 
 
+export const mapStateToProps = ({ filterCriteria, filterType }) => ({
+  filterCriteria,
+  filterType
+})
+
 export const mapDispatchToProps = dispatch => (
   bindActionCreators({
     setCardCollection,
@@ -121,4 +130,4 @@ export const mapDispatchToProps = dispatch => (
   }, dispatch)
 )
 
-export default connect(null, mapDispatchToProps)(FilterBar);
+export default connect(mapStateToProps, mapDispatchToProps)(FilterBar);

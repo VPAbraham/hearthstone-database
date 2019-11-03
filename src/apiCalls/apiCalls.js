@@ -1,5 +1,7 @@
+import { filterCriteria } from "../reducers/filterCriteria";
+
 const baseUrl = 'https://api.pokemontcg.io/v1/cards';
-const pageHeader = '?types=dragon&pageSize=120'
+const pageHeader = '?types=dragon&pageSize=10'
 
 
 const cleanCardData = (data) => {
@@ -24,24 +26,29 @@ const cleanCardData = (data) => {
   })
 }
 
-export const getCards = async () => {
+export const getCards = async (filterType, filterCriteria) => {
+  console.log(filterType, filterCriteria)
+
+  generateCardUrl(baseUrl, filterType, filterCriteria)
   const response = await fetch(baseUrl + pageHeader);
-  // const response = await fetch('baseUrl' {
-  //   method: 'get',
-  //   params: {
-  //     Count: '200'
-  //   }
-  // })
+
   const rawData = await response.json();
+
   const rawCards = await rawData.cards;
+
   const data = cleanCardData(rawCards)
+
   return data  
 }
 
 const generateCardUrl = (base, filterType, filterCriteria, page) => {
-  // if(filterType === 'types') {
+  console.log(filterType, filterCriteria)
 
-  //   const genUrl = (base + '?types' + )
-  //   return genUrl
-  // }
+  if(filterType === 'types') {
+    console.log('got types', filterCriteria)
+  } else if (filterType === 'rarity') {
+    console.log('got rarity', filterCriteria)
+  } else if (filterType === 'set'){
+    console.log('got set', filterCriteria)
+  }
 }
