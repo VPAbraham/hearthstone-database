@@ -54,7 +54,7 @@ class FilterBar extends Component {
     const typeDisplay = pokemonTypes.map(type => {
       return (
         <li filter-id='type' type-id={type}>
-          <img src={images.type} alt='type symbol'/>
+          <img src={images[type]} alt='type symbol'/>
         </li>
       )
     })
@@ -67,22 +67,15 @@ class FilterBar extends Component {
           <ul className='mana-ul-1'>
            {typeDisplay}
           </ul>
-          <ul className='mana-ul-2'>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9+</li>
-          </ul>
         </section>
         <section className='rarity-filter'>
             <h3>Rarity</h3>
             <div className='filter-divider'></div>
           <ul>
-            <li><img className='rarity-gem' src={common} id='common' alt='common card gem' onClick={((e) => this.handleChange(e))}/>Common</li>
-            <li><img className='rarity-gem' src={rare} id='uncommon' alt='uncommon card gem' onClick={((e) => this.handleChange(e))}/>Uncommon</li>
-            <li><img className='rarity-gem' src={epic} id='rare' alt='epic card gem' onClick={((e) => this.handleChange(e))}/>Rare</li>
-            <li><img className='rarity-gem' src={legendary} id='rare-holo' alt='legendary card gem' onClick={((e) => this.handleChange(e))}/>Rare Holographic</li>
+            <li><img className='rarity-gem' src={common} id='common' alt='common card gem' onClick={((e) => this.handleChange(e))}/></li>
+            <li><img className='rarity-gem' src={rare} id='uncommon' alt='uncommon card gem' onClick={((e) => this.handleChange(e))}/></li>
+            <li><img className='rarity-gem' src={epic} id='rare' alt='epic card gem' onClick={((e) => this.handleChange(e))}/></li>
+            <li><img className='rarity-gem' src={legendary} id='rare-holo' alt='legendary card gem' onClick={((e) => this.handleChange(e))}/></li>
           </ul>
         </section>
         <section className='set-filter'>

@@ -39,7 +39,7 @@ import ground from './images/Ground.png';
 import ice from './images/Ice.png';
 import normal from './images/Normal.png';
 import poison from './images/Poison.png';
-import psychic from './images/psychic.png';
+import psychic from './images/Psychic.png';
 import rock from './images/Rock.png';
 import steel from './images/Steel.png';
 import water from './images/Water.png';
