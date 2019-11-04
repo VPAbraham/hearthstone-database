@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should match the snapshot 1`] = `
+<nav
+  className="nav-bar"
+>
+  <img
+    alt="Hearthstone logo"
+    className="hs-logo"
+    src="pokeball.png"
+  />
+  <div
+    className="nav-logo"
+  >
+    <h1>
+      PokemonDB
+    </h1>
+    <h4>
+      POKEMON CARD DATABASE & DECK TRACKER
+    </h4>
+  </div>
+  <div
+    className="nav-search"
+  >
+    <label
+      for="card-search"
+    >
+      Search for a card
+    </label>
+    <input
+      id="card-search"
+      name="card-search"
+      type="text"
+    />
+  </div>
+</nav>
+`;

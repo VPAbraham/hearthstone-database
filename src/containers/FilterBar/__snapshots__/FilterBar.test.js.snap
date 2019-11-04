@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterBar should match the snapshot 1`] = `
+<div
+  className="filter-bar"
+>
+  <section
+    className="mana-filter"
+  >
+    <h3>
+      Type
+    </h3>
+    <div
+      className="filter-divider"
+    />
+    <ul
+      className="mana-ul-1"
+    >
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="bug"
+          onClick={[Function]}
+          src="Bug.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="dark"
+          onClick={[Function]}
+          src="Dark.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="dragon"
+          onClick={[Function]}
+          src="Dragon.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="electric"
+          onClick={[Function]}
+          src="Electric.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="fairy"
+          onClick={[Function]}
+          src="Fairy.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="fighting"
+          onClick={[Function]}
+          src="Fighting.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="fire"
+          onClick={[Function]}
+          src="Fire.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="flying"
+          onClick={[Function]}
+          src="Flying.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="ghost"
+          onClick={[Function]}
+          src="Ghost.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="grass"
+          onClick={[Function]}
+          src="Grass.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="ground"
+          onClick={[Function]}
+          src="Ground.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="ice"
+          onClick={[Function]}
+          src="Ice.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="normal"
+          onClick={[Function]}
+          src="Normal.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="poison"
+          onClick={[Function]}
+          src="Poison.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="psychic"
+          onClick={[Function]}
+          src="Psychic.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="rock"
+          onClick={[Function]}
+          src="Rock.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="steel"
+          onClick={[Function]}
+          src="Steel.png"
+        />
+      </li>
+      <li>
+        <img
+          alt="type symbol"
+          className="types"
+          id="water"
+          onClick={[Function]}
+          src="Water.png"
+        />
+      </li>
+    </ul>
+  </section>
+  <section
+    className="rarity-filter"
+  >
+    <h3>
+      Rarity
+    </h3>
+    <div
+      className="filter-divider"
+    />
+    <ul>
+      <li>
+        <img
+          alt="rarity gem"
+          className="rarity"
+          id="common"
+          onClick={[Function]}
+          src="common.svg"
+        />
+      </li>
+      <li>
+        <img
+          alt="rarity gem"
+          className="rarity"
+          id="uncommon"
+          onClick={[Function]}
+          src="rare.svg"
+        />
+      </li>
+      <li>
+        <img
+          alt="rarity gem"
+          className="rarity"
+          id="rare"
+          onClick={[Function]}
+          src="epic.svg"
+        />
+      </li>
+      <li>
+        <img
+          alt="rarity gem"
+          className="rarity"
+          id="rareholo"
+          onClick={[Function]}
+          src="legendary.svg"
+        />
+      </li>
+    </ul>
+  </section>
+  <section
+    className="set-filter"
+  >
+    <h3>
+      Set
+    </h3>
+    <div
+      className="filter-divider"
+    />
+    <ul>
+      <li
+        className="set"
+        id="base1"
+        onClick={[Function]}
+      >
+        <p>
+          base1
+        </p>
+        <img
+          alt="set icon"
+          src="https://images.pokemontcg.io/base1/symbol.png"
+        />
+      </li>
+      <li
+        className="set"
+        id="base2"
+        onClick={[Function]}
+      >
+        <p>
+          base2
+        </p>
+        <img
+          alt="set icon"
+          src="https://images.pokemontcg.io/base2/symbol.png"
+        />
+      </li>
+      <li
+        className="set"
+        id="base3"
+        onClick={[Function]}
+      >
+        <p>
+          base3
+        </p>
+        <img
+          alt="set icon"
+          src="https://images.pokemontcg.io/base3/symbol.png"
+        />
+      </li>
+      <li
+        className="set"
+        id="base4"
+        onClick={[Function]}
+      >
+        <p>
+          base4
+        </p>
+        <img
+          alt="set icon"
+          src="https://images.pokemontcg.io/base4/symbol.png"
+        />
+      </li>
+      <li
+        className="set"
+        id="base5"
+        onClick={[Function]}
+      >
+        <p>
+          base5
+        </p>
+        <img
+          alt="set icon"
+          src="https://images.pokemontcg.io/base5/symbol.png"
+        />
+      </li>
+      <li
+        className="set"
+        id="gym1"
+        onClick={[Function]}
+      >
+        <p>
+          gym1
+        </p>
+        <img
+          alt="set icon"
+          src="https://images.pokemontcg.io/gym1/symbol.png"
+        />
+      </li>
+      <li
+        className="set"
+        id="gym2"
+        onClick={[Function]}
+      >
+        <p>
+          gym2
+        </p>
+        <img
+          alt="set icon"
+          src="https://images.pokemontcg.io/gym2/symbol.png"
+        />
+      </li>
+    </ul>
+  </section>
+</div>
+`;

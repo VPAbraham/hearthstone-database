@@ -1,15 +1,10 @@
 import React from 'react';
-import NavBar from './NavBar';
 import { shallow } from 'enzyme';
+import { App } from './App';
 
-describe('NavBar', () => {
-  let wrapper;
-  beforeEach(() => {
-    wrapper = shallow(
-      <NavBar />
-    )
-  })
+describe('App', () => {
   it('should match the snapshot', () => {
+    const wrapper = shallow(<App />)
     expect(wrapper).toMatchSnapshot()
   })
 })

@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { setCardCollection, setFilterType, setFilterCriteria } from '../../actions/index';
 import { getCards } from '../../apiCalls/apiCalls';
 
-class FilterBar extends Component {
+export class FilterBar extends Component {
   constructor() {
     super()
   }
