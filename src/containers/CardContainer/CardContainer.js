@@ -1,7 +1,8 @@
 import React   from 'react';
 import Card from '../../components/Card/Card';
 import './CardContainer.scss';
-import loadingImg from '../../assets/images/loading.gif'
+import PropTypes from 'prop-types';
+import loadingImg from '../../assets/images/loading.gif';
 import { connect } from 'react-redux';
 
 
@@ -46,3 +47,8 @@ export const mapStateToProps =( { cards, isLoading } ) => ({
 })
 
 export default connect(mapStateToProps)(CardContainer);
+
+CardContainer.propTypes = {
+  cards: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './FilterBar.scss';
+import PropTypes from 'prop-types'
 import images from '../../assets/images';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -17,7 +18,6 @@ export class FilterBar extends Component {
 
   handleChange = (e) => {
     e.preventDefault()
-
     const filterType = e.currentTarget.className
     const filterCriteria = e.currentTarget.id
     this.props.setFilterCriteria(filterCriteria)
@@ -75,6 +75,7 @@ export class FilterBar extends Component {
 
     return (
       <div className='filter-bar'>
+        <button onClick={((e) => this.filterClickHandler(e))}>CLEAR FILTERS</button >
         <section className='mana-filter'>
           <h3>Type</h3>
           <div className='filter-divider'></div>
@@ -117,3 +118,12 @@ export const mapDispatchToProps = dispatch => (
 )
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilterBar);
+
+FilterBar.propTypes = {
+  setCardCollection: PropTypes.func.isRequired,
+  setFilterCriteria: PropTypes.func.isRequired,
+  setFilterType: PropTypes.func.isRequired,
+  toggleLoading: PropTypes.func.isRequired,
+  filterCriteria: PropTypes.string.isRequired,
+  filterType: PropTypes.string.isRequired
+}

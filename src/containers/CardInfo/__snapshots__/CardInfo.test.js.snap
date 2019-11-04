@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardInfo should match the snapchot with data passed through 1`] = `
+exports[`CardInfo should match the snapshot with data passed through 1`] = `
 <section
   className="card-info"
 >
@@ -30,6 +30,13 @@ exports[`CardInfo should match the snapchot with data passed through 1`] = `
       </p>
       <p>
         Art by: 
+      </p>
+      <p>
+        Type: 
+        Fire
+      </p>
+      <p>
+        Attack: 
       </p>
     </div>
   </div>

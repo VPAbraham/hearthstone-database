@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.scss';
+import PropTypes from 'prop-types'
 import images from '../../assets/images';
 import { Link } from 'react-router-dom';
 

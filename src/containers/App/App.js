@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.scss';
 import images from '../../assets/images';
 import NavBar from '../../components/NavBar/NavBar';
@@ -7,12 +7,10 @@ import FilterBar from '../FilterBar/FilterBar';
 import CardContainer from '../CardContainer/CardContainer';
 import CardInfo from '../CardInfo/CardInfo';
 
-import { connect } from 'react-redux';
-
 export class App extends Component {
 
   render() {
-    const { hsBack, backGround } = images;
+    const { backGround } = images;
     return (
       <div className='App'>
           <NavBar />
