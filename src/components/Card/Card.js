@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.scss';
 
-const Card = (props) => {
+export const Card = (props) => {
   const { name, imageUrl, pokedexNum,
     hp, attacks, resistances, weaknesses, rarity,
     types, set, artist } = props

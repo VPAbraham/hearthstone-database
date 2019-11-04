@@ -5,7 +5,7 @@ import loadingImg from '../../assets/images/loading.gif'
 import { connect } from 'react-redux';
 
 
-const CardContainer = (props) => {
+export const CardContainer = (props) => {
   let selectedCards = props.cards.map(card => {
 
     const { name, imageUrl, nationalPokedexNumber,
