@@ -1,6 +1,7 @@
 import React from 'react';
-import { Card } from './Card';
+import { Card, mapDispatchToProps } from './Card';
 import { shallow } from 'enzyme';
+import { setSelectedCard } from '../../actions';
 
 describe('Card', () => {
   let wrapper;
@@ -23,4 +24,16 @@ describe('Card', () => {
   it('should match the snapshot with the data passed in', () => {
     expect(wrapper).toMatchSnapshot()
   });
+});
+
+describe('mapDispatchToProps', () => {
+    it('calls dispatch to set the selected card when select card', () => {
+      const mockProps = { name: 'Magikarp', hp: '40', rarity: 'Common' }
+      const mockDispatch = jest.fn();
+      const actionToDispatch = setSelectedCard({name: 'Magikarp', hp: '40', rarity: 'Common'})
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.setSelectedCard(mockProps)
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    })
 })

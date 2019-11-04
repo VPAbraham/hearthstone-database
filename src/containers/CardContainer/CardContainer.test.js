@@ -43,4 +43,20 @@ describe('mapState to props for CardContainer', () => {
     expect(mappedProps).toEqual(expected);
 
   });
+
+  it('should be aware if the state of isLoading', () => {
+    const mockState = {
+      isLoading: false
+  
+    }
+
+    const expected = {
+      isLoading: false
+    }  
+
+    const mappedProps = mapStateToProps(mockState);
+
+    expect(mappedProps).toEqual(expected);
+
+  });
 });

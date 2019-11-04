@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.scss';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setSelectedCard } from '../../actions';
@@ -7,18 +8,13 @@ import { Link } from 'react-router-dom';
 
 
 export const Card = (props) => {
-  const { name, imageUrl, pokedexNum,
-    hp, attacks, resistances, weaknesses, rarity,
-    types, set, artist, setSelectedCard } = props;
+  const { name, imageUrl, pokedexNum, rarity,
+    types, setSelectedCard } = props;
 
-    const selectCard = () => {
-      setSelectedCard(props)
-      console.log(props)
-    }
 
   return(
     <Link to='/cardinfo'>
-      <div className='card' onClick={((e) => selectCard(e))}>
+      <div className='card' onClick={(() => setSelectedCard(props))}>
         <h1>{name}</h1>
         <p>Pokedex No. {pokedexNum}</p>
         <p>Type: {types}</p>
@@ -37,3 +33,13 @@ export const mapDispatchToProps = dispatch => (
   }, dispatch)
 )
 export default connect(null, mapDispatchToProps)(Card);
+
+Card.propTypes = {
+  setSelectedCard: PropTypes.func,
+  name: PropTypes.string,
+  imageUrl: PropTypes.string,
+  pokedexNum: PropTypes.string,
+  rarity: PropTypes.string,
+  types: PropTypes.array,
+  set: PropTypes.func,
+}

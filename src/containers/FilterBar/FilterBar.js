@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import './FilterBar.scss';
+import PropTypes from 'prop-types'
 import images from '../../assets/images';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setCardCollection, setFilterType, setFilterCriteria } from '../../actions/index';
+import { setCardCollection, setFilterType, setFilterCriteria, toggleLoading } from '../../actions/index';
 import { getCards } from '../../apiCalls/apiCalls';
 
 export class FilterBar extends Component {
 
   async componentDidMount() {
+    this.props.toggleLoading(true);
     let cards = await getCards();
     this.props.setCardCollection(cards);
+    this.props.toggleLoading(false)
   }
 
   handleChange = (e) => {
     e.preventDefault()
-
     const filterType = e.currentTarget.className
     const filterCriteria = e.currentTarget.id
     this.props.setFilterCriteria(filterCriteria)
@@ -25,9 +27,11 @@ export class FilterBar extends Component {
   filterClickHandler = async (e) => {
     e.preventDefault();
     await this.handleChange(e);
-    const { filterType, filterCriteria } = this.props
+    const { filterType, filterCriteria } = this.props;
+    this.props.toggleLoading(true);
     const newCards = await getCards(filterType, filterCriteria)
     this.props.setCardCollection(newCards)
+    this.props.toggleLoading(false)
   }
 
 
@@ -71,6 +75,7 @@ export class FilterBar extends Component {
 
     return (
       <div className='filter-bar'>
+        <button onClick={((e) => this.filterClickHandler(e))}>CLEAR FILTERS</button >
         <section className='mana-filter'>
           <h3>Type</h3>
           <div className='filter-divider'></div>
@@ -107,8 +112,18 @@ export const mapDispatchToProps = dispatch => (
   bindActionCreators({
     setCardCollection,
     setFilterCriteria,
-    setFilterType
+    setFilterType,
+    toggleLoading
   }, dispatch)
 )
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilterBar);
+
+FilterBar.propTypes = {
+  setCardCollection: PropTypes.func.isRequired,
+  setFilterCriteria: PropTypes.func.isRequired,
+  setFilterType: PropTypes.func.isRequired,
+  toggleLoading: PropTypes.func.isRequired,
+  filterCriteria: PropTypes.string.isRequired,
+  filterType: PropTypes.string.isRequired
+}
