@@ -18,6 +18,7 @@ export const CardInfo = (props) => {
           {/* <p>Attacks: {selCard.attacks}</p> */}
           <p>Rarity: {selCard.rarity}</p>
           <p>Set: {selCard.set}</p>
+          <p>Art by: {selCard.artist}</p>
           {/* <p>Type: {selCard.types[0] || 'n/a'}</p> */}
       
 

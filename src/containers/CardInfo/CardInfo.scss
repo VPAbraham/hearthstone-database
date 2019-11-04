@@ -20,6 +20,9 @@
 
     div {
       font-size: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
     }
   }
 
@@ -33,6 +36,7 @@
     font-size: 2em;
     background: rgb(185, 88, 88);
     transition: 0.5s;
+    margin-top: 8rem;
 
     &:hover {
       background: rgb(206, 159, 159);
