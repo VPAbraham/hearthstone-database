@@ -1,31 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card should match the snapshot with the data passed in 1`] = `
-<div
-  className="card"
-  onClick={[Function]}
+<Link
+  to="/cardinfo"
 >
-  <h1>
-    Charizard
-  </h1>
-  <p>
-    Pokedex No. 
-    123
-  </p>
-  <p>
-    Type: 
-    Fire
-  </p>
-  <p>
-    Rarity: 
-    Rare
-  </p>
-  <button>
-    See More Details
-  </button>
-  <img
-    alt="Charizard"
-    src="www.image.com"
-  />
-</div>
+  <div
+    className="card"
+    onClick={[Function]}
+  >
+    <h1>
+      Charizard
+    </h1>
+    <p>
+      Pokedex No. 
+      123
+    </p>
+    <p>
+      Type: 
+      Fire
+    </p>
+    <p>
+      Rarity: 
+      Rare
+    </p>
+    <button>
+      See More Details
+    </button>
+    <img
+      alt="Charizard"
+      src="www.image.com"
+    />
+  </div>
+</Link>
 `;

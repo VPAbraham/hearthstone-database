@@ -4,11 +4,15 @@ exports[`NavBar should match the snapshot 1`] = `
 <nav
   className="nav-bar"
 >
-  <img
-    alt="Hearthstone logo"
-    className="hs-logo"
-    src="pokeball.png"
-  />
+  <Link
+    to="/"
+  >
+    <img
+      alt="Hearthstone logo"
+      className="hs-logo"
+      src="pokeball.png"
+    />
+  </Link>
   <div
     className="nav-logo"
   >
@@ -22,9 +26,7 @@ exports[`NavBar should match the snapshot 1`] = `
   <div
     className="nav-search"
   >
-    <label
-      for="card-search"
-    >
+    <label>
       Search for a card
     </label>
     <input
