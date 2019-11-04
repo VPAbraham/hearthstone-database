@@ -4,7 +4,7 @@ exports[`CardContainer should match the snapshot 1`] = `
 <section
   className="card-container"
 >
-  <Card
+  <Connect(Card)
     attacks="N/A"
     hp="70"
     imageUrl="N/A"
@@ -16,7 +16,7 @@ exports[`CardContainer should match the snapshot 1`] = `
     types="N/A"
     weaknesses="N/A"
   />
-  <Card
+  <Connect(Card)
     attacks="N/A"
     hp="70"
     imageUrl="N/A"

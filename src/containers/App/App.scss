@@ -9,7 +9,14 @@
   padding: 0;
   outline: none;
   list-style: none;
-  // border: 1px red solid;
+
+  &:link {
+    color: white;
+  }
+
+  &:visited {
+    color: white;
+  }
 }
 
 body {

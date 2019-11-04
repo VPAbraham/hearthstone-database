@@ -9,7 +9,7 @@ export const setFilterCriteria = (filterCriteria) => ({
 })
 
 export const setCardCollection = (cards) => ({
-  type: 'SET_CARD_COLLECTION',
+  type: "SET_CARD_COLLECTION",
   cards
 })
 
@@ -17,4 +17,9 @@ export const toggleLoading = (boolean) => ({
   type: "TOGGLE_LOADING",
   boolean
 })
+
+export const setSelectedCard = (selCard) => ({
+  type: "SET_SELECTED_CARD",
+  selCard
+}) 
 
