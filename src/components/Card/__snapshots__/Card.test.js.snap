@@ -3,6 +3,7 @@
 exports[`Card should match the snapshot with the data passed in 1`] = `
 <div
   className="card"
+  onClick={[Function]}
 >
   <h1>
     Charizard
@@ -19,6 +20,9 @@ exports[`Card should match the snapshot with the data passed in 1`] = `
     Rarity: 
     Rare
   </p>
+  <button>
+    See More Details
+  </button>
   <img
     alt="Charizard"
     src="www.image.com"

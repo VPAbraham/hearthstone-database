@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import './FilterBar.scss';
 import images from '../../assets/images';
-import { mana } from './mana.svg';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setCardCollection, setFilterType, setFilterCriteria } from '../../actions/index';
 import { getCards } from '../../apiCalls/apiCalls';
 
 export class FilterBar extends Component {
-  constructor() {
-    super()
-  }
+
   async componentDidMount() {
     let cards = await getCards();
     this.props.setCardCollection(cards);
@@ -18,7 +15,6 @@ export class FilterBar extends Component {
 
   handleChange = (e) => {
     e.preventDefault()
-    console.log('hullo')
 
     const filterType = e.currentTarget.className
     const filterCriteria = e.currentTarget.id
@@ -30,20 +26,14 @@ export class FilterBar extends Component {
     e.preventDefault();
     await this.handleChange(e);
     const { filterType, filterCriteria } = this.props
-    console.log(filterType, filterCriteria)
     const newCards = await getCards(filterType, filterCriteria)
     this.props.setCardCollection(newCards)
-    console.log(newCards)
   }
-
-
 
 
   render() {
     const {
-      common, rare, uncommon, rareholo,
-      basicIcon, classicIcon, woodIcon, boomIcon,
-      saviorsIcon, shadowsIcon, rumbleIcon, manaIcon
+      common, rare, uncommon, rareholo
     } = images;
 
     const pokemonTypes = ['bug', 'dark', 'dragon', 'electric', 
@@ -52,7 +42,7 @@ export class FilterBar extends Component {
 
     const typeDisplay = pokemonTypes.map(type => {
       return (
-        <li >
+        <li key={type}>
           <img className='types' id={type} src={images[type]} alt='type symbol' onClick={((e) => this.filterClickHandler(e))}/>
         </li>
       )
@@ -61,7 +51,7 @@ export class FilterBar extends Component {
     const rarityDisplay = ['common', 'uncommon', 'rare', 'rareholo'].map(rarity => {
       const imgSrc = eval(rarity)
       return (
-        <li>
+        <li key={rarity}>
           <img className='rarity' id={rarity} src={imgSrc} alt='rarity gem' onClick={((e) => this.filterClickHandler(e))}/>
         </li>
       )
@@ -72,7 +62,7 @@ export class FilterBar extends Component {
     const setDisplay = pokemonSets.map(set => {
       const imgSrc = ('https://images.pokemontcg.io/' + set + '/symbol.png')
       return (
-        <li className='set' id={set} onClick={((e) => this.filterClickHandler(e))}>
+        <li className='set' id={set} key={set} onClick={((e) => this.filterClickHandler(e))}>
           <p>{set}</p>
           <img  src={imgSrc}  alt='set icon'/>
         </li>
