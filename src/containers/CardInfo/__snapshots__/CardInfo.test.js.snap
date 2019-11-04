@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardInfo should match the snapchot with data passed through 1`] = `
+<section
+  className="card-info"
+>
+  <h1>
+    Card Data for 
+    Cubone
+  </h1>
+  <div
+    className="info-container"
+  >
+    <img
+      alt="card image"
+    />
+    <div>
+      <p>
+        Pokedex No. 
+      </p>
+      <p>
+        HP: 
+        70
+      </p>
+      <p>
+        Rarity: 
+      </p>
+      <p>
+        Set: 
+      </p>
+      <p>
+        Art by: 
+      </p>
+    </div>
+  </div>
+  <Link
+    to="/"
+  >
+    <button>
+      Return to Main Page
+    </button>
+  </Link>
+</section>
+`;
