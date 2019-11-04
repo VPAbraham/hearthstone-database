@@ -3,21 +3,19 @@ import { shallow } from 'enzyme';
 import { FilterBar, mapStateToProps, matchDispatchToProps } from './FilterBar';
 
 describe('FilterBar', () => {
+  let wrapper;
   beforeEach(() => {
-    const mockSetCardCollection = jest.fn()
-    const mockSetFilterCriteria = jest.fn()
-    const mocksetFilterType = jest.fn()
-  })
-  it('should match the snapshot', () => {
-    let wrapper = shallow(
+    wrapper = shallow(
       <FilterBar 
         filterCriteria={''}
         filterType={''}
         setCardCollection={jest.fn()}
         setFilterType={jest.fn}
         setFilterCriteria={jest.fn}
-        />
-    )
+        />)
+  });
+
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 })
