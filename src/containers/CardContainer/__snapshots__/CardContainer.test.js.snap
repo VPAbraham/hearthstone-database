@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match the snapshot 1`] = `
+<section
+  className="card-container"
+>
+  <Card
+    attacks="N/A"
+    hp="70"
+    imageUrl="N/A"
+    name="Vulpix"
+    pokedexNum="N/A"
+    rarity="Common"
+    resistances="N/A"
+    set="HS-Unleashed"
+    types="N/A"
+    weaknesses="N/A"
+  />
+  <Card
+    attacks="N/A"
+    hp="70"
+    imageUrl="N/A"
+    name="Charmeleon"
+    pokedexNum="N/A"
+    rarity="Uncommon"
+    resistances="N/A"
+    set="FireRed"
+    types="N/A"
+    weaknesses="N/A"
+  />
+</section>
+`;

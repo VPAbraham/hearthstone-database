@@ -17,8 +17,8 @@ export const CardContainer = (props) => {
       imageUrl={imageUrl || 'N/A'}
       pokedexNum={nationalPokedexNumber || 'N/A'}
       hp={hp || 'N/A'}
-      types={types}
-      attacks={attacks || 'NA'}
+      types={types || 'N/A'}
+      attacks={attacks || 'N/A'}
       resistances={resistances || 'N/A'}
       weaknesses={weaknesses || 'N/A'}
       rarity={rarity || 'N/A'}
@@ -35,9 +35,8 @@ export const CardContainer = (props) => {
   )
 }
 
-export const mapStateToProps =( { cards, filterType } ) => ({
-  cards,
-  filterType
+export const mapStateToProps =( { cards } ) => ({
+  cards
 })
 
 export default connect(mapStateToProps)(CardContainer);

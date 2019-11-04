@@ -8,22 +8,17 @@ import CardContainer from '../CardContainer/CardContainer';
 import { connect } from 'react-redux';
 import { } from '../../apiCalls/apiCalls';
 
-class App extends Component {
-
-  async componentDidMount() {
-  }
+export class App extends Component {
 
   render() {
     const { hsBack, backGround } = images;
     return (
-      <Router>
         <section>
           <NavBar />
           <img className='background-image' src={backGround} alt='background poster'/>
           <FilterBar />
           <CardContainer />  
         </section>
-      </Router>    
     )
   }
 }
