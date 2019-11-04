@@ -7,13 +7,11 @@ import { Link } from 'react-router-dom';
 
 
 export const Card = (props) => {
-  const { name, imageUrl, pokedexNum,
-    hp, attacks, resistances, weaknesses, rarity,
-    types, set, artist, setSelectedCard } = props;
+  const { name, imageUrl, pokedexNum, rarity,
+    types, set, setSelectedCard } = props;
 
     const selectCard = () => {
       setSelectedCard(props)
-      console.log(props)
     }
 
   return(

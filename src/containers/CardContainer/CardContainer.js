@@ -26,17 +26,23 @@ export const CardContainer = (props) => {
       set={set}
       artist={artist}
     />)
-    }) 
+    });
+
   return(
     <section className='card-container'>
-      {/* <img src={loadingImg} alt='loading spinner'/> */}
-      {selectedCards}
+      {props.isLoading &&
+      <img src={loadingImg} alt='loading spinner'/>
+      }
+      {!props.isLoading &&
+       selectedCards
+      }
     </section>
   )
 }
 
-export const mapStateToProps =( { cards } ) => ({
-  cards
+export const mapStateToProps =( { cards, isLoading } ) => ({
+  cards,
+  isLoading
 })
 
 export default connect(mapStateToProps)(CardContainer);

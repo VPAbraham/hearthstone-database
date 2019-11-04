@@ -3,14 +3,16 @@ import './FilterBar.scss';
 import images from '../../assets/images';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { setCardCollection, setFilterType, setFilterCriteria } from '../../actions/index';
+import { setCardCollection, setFilterType, setFilterCriteria, toggleLoading } from '../../actions/index';
 import { getCards } from '../../apiCalls/apiCalls';
 
 export class FilterBar extends Component {
 
   async componentDidMount() {
+    this.props.toggleLoading(true);
     let cards = await getCards();
     this.props.setCardCollection(cards);
+    this.props.toggleLoading(false)
   }
 
   handleChange = (e) => {
@@ -25,9 +27,11 @@ export class FilterBar extends Component {
   filterClickHandler = async (e) => {
     e.preventDefault();
     await this.handleChange(e);
-    const { filterType, filterCriteria } = this.props
+    const { filterType, filterCriteria } = this.props;
+    this.props.toggleLoading(true);
     const newCards = await getCards(filterType, filterCriteria)
     this.props.setCardCollection(newCards)
+    this.props.toggleLoading(false)
   }
 
 
@@ -107,7 +111,8 @@ export const mapDispatchToProps = dispatch => (
   bindActionCreators({
     setCardCollection,
     setFilterCriteria,
-    setFilterType
+    setFilterType,
+    toggleLoading
   }, dispatch)
 )
 

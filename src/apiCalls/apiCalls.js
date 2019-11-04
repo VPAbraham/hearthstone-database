@@ -30,9 +30,11 @@ export const getCards = async (filterType, filterCriteria) => {
 
   const genUrl = generateCardUrl(baseUrl, filterType, filterCriteria)
   const response = await fetch(genUrl || baseUrl);
+  checkReponses(response)
   const rawData = await response.json();
   const rawCards = await rawData.cards;
   const data = cleanCardData(rawCards)
+  checkContent(data)
   console.log(data)
   return data  
 }
@@ -49,4 +51,20 @@ const generateCardUrl = (base, filterType, filterCriteria, page) => {
     }
   }
   return genUrl()  
+}
+
+const checkReponses = (resp) => {
+  if (resp.ok === true) {
+    console.log('Succesful fetch!')
+  } else {
+    console.log(resp.status)
+  }
+}
+
+const checkContent = (data) => {
+  if (data.length > 1) {
+    console.log('Received new card set')
+  } else {
+    console.log('No cards received')
+  }
 }

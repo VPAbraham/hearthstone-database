@@ -84,5 +84,19 @@ describe('actions', () => {
     });
   });
 
+  describe('SET_SELECTED_CARD', () => {
+    it('should have a type of SET_SELECTED_CARD', () => {
+      const mockCard = {name: 'Marowak', hp: '70', rarity: 'Uncommon'}
+
+      const expectedAction = {
+        type: 'SET_SELECTED_CARD',
+        selCard: { name: 'Marowak', hp: '70', rarity: 'Uncommon' }
+      }
+
+      const result = actions.setSelectedCard(mockCard)
+      expect(result).toEqual(expectedAction)
+    })
+  })
+
 
 });
