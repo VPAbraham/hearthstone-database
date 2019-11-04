@@ -23,7 +23,7 @@ export class App extends Component {
         </Route>
         <Route exact path='/cardinfo'>
           <CardInfo />
-        </Route>  
+        </Route>
       </div>
     )
   }

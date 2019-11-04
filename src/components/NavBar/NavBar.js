@@ -22,9 +22,10 @@ const NavBar = () => {
         type='text' 
         id='card-search' 
         name='card-search'
-        // placeholder='Input Card Name'
+        placeholder='Sorry, this feature is under construction'
        />
       </div>
+        <img className='construction' src='https://cdn.bulbagarden.net/upload/thumb/d/db/XY_Worker_A.png/171px-XY_Worker_A.png' alt='under construction icon'/>
     </nav>
   )
 }
