@@ -8,7 +8,8 @@ The Pokemon Database utilizes the Pokemon Trading Card Game API to display and a
 
 ### Getting started
 1. `git clone` a copy of the repostiory to your local machine
-2. 
+2. run `npm start` to boot a local server 
+3. the application should run in your browser at default port http://localhost:3000/ If this is already being used, you will be prompted to allow it to use the next available port.
 
 ### Stack:
 - React
