@@ -35,7 +35,6 @@ export const getCards = async (filterType, filterCriteria) => {
   const rawCards = await rawData.cards;
   const data = cleanCardData(rawCards)
   checkContent(data)
-  console.log(data)
   return data  
 }
 
