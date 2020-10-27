@@ -3,7 +3,7 @@
 A Turing Module 3 Project
 
 
-The Pokemon Database utilizes the Pokemon Trading Card Game API to display and allows users to filter through Pokemon cards based on a set of criteria. Teh application is built on React, utilizing Redux store for all state related changes.
+The Pokemon Database utilizes the Pokemon Trading Card Game API to display and allows users to filter through Pokemon cards based on a set of criteria. The application is built on React, utilizing Redux store for all state related changes.
 
 
 ### Getting started
