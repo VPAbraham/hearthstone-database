@@ -1,14 +1,8 @@
 .card-container {
   width: 80%;
   height: 100%;
-  margin: -45% 0 0 10px;
   text-align: center;
-  float: right;
-  padding: 10px;
-  justify-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  position: absolute;
-  right: 0;
 }

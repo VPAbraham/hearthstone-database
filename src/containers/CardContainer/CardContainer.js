@@ -13,7 +13,8 @@ export const CardContainer = (props) => {
       hp, attacks, resistances, weaknesses, rarity,
       types, set, artist } = card
 
-    return (<Card
+    return (
+    <Card
       name={name || 'N/A'}
       imageUrl={imageUrl || 'N/A'}
       pokedexNum={nationalPokedexNumber || 'N/A'}
@@ -26,7 +27,8 @@ export const CardContainer = (props) => {
       key={imageUrl}
       set={set}
       artist={artist}
-    />)
+    />
+    )
     });
 
   return(

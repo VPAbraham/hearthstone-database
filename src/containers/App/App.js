@@ -6,6 +6,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import FilterBar from '../FilterBar/FilterBar';
 import CardContainer from '../CardContainer/CardContainer';
 import CardInfo from '../CardInfo/CardInfo';
+import Home from '../Home/Home';
 
 export class App extends Component {
 
@@ -16,8 +17,9 @@ export class App extends Component {
           <NavBar />
           <img className='background-image' src={backGround} alt='background poster'/>
         <Route exact path='/'>
-          <FilterBar />
-          <CardContainer />  
+          <Home />
+          {/* <FilterBar />
+          <CardContainer />   */}
         </Route>
         <Route exact path='/cardinfo'>
           <CardInfo />

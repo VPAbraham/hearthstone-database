@@ -14,13 +14,15 @@ export const Card = (props) => {
 
   return(
     <Link to='/cardinfo'>
-      <div className='card' onClick={(() => setSelectedCard(props))}>
-        <h1>{name}</h1>
-        <p>Pokedex No. {pokedexNum}</p>
-        <p>Type: {types}</p>
-        <p>Rarity: {rarity}</p>
-        <button>See More Details</button>
-        <img src={imageUrl} alt={name}/>
+      <div className='card-border'>
+        <div className='card' onClick={(() => setSelectedCard(props))}>
+          <h1>{name}</h1>
+          <p>Pokedex No. {pokedexNum}</p>
+          <p>Type: {types}</p>
+          <p>Rarity: {rarity}</p>
+          <button>See More Details</button>
+          <img src={imageUrl} alt={name}/>
+        </div>
       </div>
     </Link>
   )
